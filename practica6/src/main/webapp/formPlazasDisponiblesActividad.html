@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Listado de plazas</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<img src="./images/Cabecera.png" alt="Cabecera">
+
+<h1>Formulario de listado de plazas disponibles</h1>
+
+	<form action="ServletListarPlazas" method="get">
+	  	<label>Actividad</label>
+		<select name="actividad" class="select-ancho">
+		    <option value="Ironfit">Ironfit</option>
+		    <option value="Taichí">Taichí</option>
+		    <option value="Yoga">Yoga</option>
+		</select>
+	
+	  	<input type="submit" value="Lista plazas">
+	</form>
+
+	<p style="margin-top:30px;">
+		<a href="./menu.html">Menú</a>
+	</p>
+
+</body>
+</html>

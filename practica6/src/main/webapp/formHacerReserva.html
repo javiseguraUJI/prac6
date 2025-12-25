@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hacer reserva</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<img src="./images/Cabecera.png" alt="Cabecera">
+
+<h1>Formulario para hacer reservas</h1>
+
+<form action="ServletHacerReserva" method="post">
+  <table style="margin: 0 auto;">
+    <tr>
+      <th>Día:</th>
+      <td>
+        <select name="dia" class="select-ancho">
+          <option value="lunes">Lunes</option>
+          <option value="martes">Martes</option>
+          <option value="miercoles">Miércoles</option>
+          <option value="jueves">Jueves</option>
+          <option value="viernes">Viernes</option>
+        </select>
+      </td>
+      <th style="padding-left:20px;">Hora:</th>
+      <td>
+        <input type="number" name="hora" min="0" max="23" style="width:60px;">
+      </td>
+    </tr>
+
+    <tr>
+      <th>Actividad:</th>
+      <td colspan="3">
+        <select name="actividad" class="select-ancho">
+          <option value="Ironfit">Ironfit</option>
+          <option value="Taichí">Taichí</option>
+          <option value="Yoga">Yoga</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="4" style="text-align:center; padding-top:10px;">
+        <input type="submit" value="Envía">
+        <input type="reset" value="Borra">
+      </td>
+    </tr>
+  </table>
+</form>
+
+<p style="margin-top:30px;">
+  <a href="./menu.html">Menú</a>
+</p>
+
+</body>
+</html>

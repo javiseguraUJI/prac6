@@ -30,8 +30,6 @@ public class ServletAcceso extends HttpServlet {
      */
     public ServletAcceso() {
         super();
-        System.out.println("Constructor de ServletBienvenida");
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -39,8 +37,6 @@ public class ServletAcceso extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println(">>> ENTRANDO EN ServletAcceso doGet");
-
 		// 1) Crear el GestorReservas la primera vez y guardarlo en el contexto
         ServletContext ctx = getServletContext();
         synchronized (ctx) {
@@ -50,8 +46,6 @@ public class ServletAcceso extends HttpServlet {
             }
         }
         
-		System.out.println(">>> 1.Crear el GestorReservas la primera vez y guardarlo en el contexto");
-
         // 2) Guardar el código del cliente en sesión 
         String cod = request.getParameter("cod"); 
         if (cod == null || cod.isBlank()) {
@@ -62,9 +56,7 @@ public class ServletAcceso extends HttpServlet {
             return;
         }
 
-        
-		System.out.println(">>> 2. Guardar el código del cliente en sesión ");
-
+       
         HttpSession session = request.getSession(true);
         session.setAttribute(ATTR_COD_USUARIO, cod.trim());
         

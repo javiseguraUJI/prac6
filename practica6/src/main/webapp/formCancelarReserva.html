@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancelar reserva</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<img src="./images/Cabecera.png" alt="Cabecera">
+
+<h1>Formulario para cancelar una reserva</h1>
+
+	<form action="ServletCancelarReserva" method="post">
+		<table style="margin: 0 auto;">
+		    <tr>
+			      <th>Código de la reserva:</th>
+			      <td>
+			        <input type="number" name="codReserva" required style="width:120px;">
+			      </td>
+			      <td>
+			        <input type="submit" value="Cancela reserva">
+			      </td>
+		    </tr>
+		</table>
+	</form>
+	
+	<p style="margin-top:30px;">
+	  <a href="./menu.html">Menú</a>
+	</p>
+
+</body>
+</html>

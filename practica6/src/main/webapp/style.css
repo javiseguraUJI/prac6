@@ -1,10 +1,5 @@
 body {
-    text-align: center;
     font-family: Arial, sans-serif;
-  }
-
-h1 {
-    color: blue;
 }
 
 img {
@@ -13,9 +8,60 @@ img {
     width: 80%;
 }
 
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+p {
+    text-align: center;
+}
+
+ul {
+    display: block;            /* bloque normal */
+    width: fit-content;        /* ancho justo al contenido */
+    margin: 30px auto;         /* centra el bloque */
+    padding-left: 40px;        /* espacio para los puntos */
+    text-align: left;          /* texto y puntos alineados */
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Enlaces */
+li a {
+    color: blue;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
 form {
     margin: 0 auto;
     width: 300px; 
 }
 
+ul.jsonlist { 
+	display: block; 
+	width: fit-content; 
+	margin: 30px auto; 
+	text-align: left; 
+	padding-left: 40px;
+}
 
+pre.json {
+	margin: 0;
+	font-size: 14px;
+	white-space: pre-wrap; 
+	word-break: break-word;
+}
+
+.select-ancho {
+    width: 100px;        
+
+}
