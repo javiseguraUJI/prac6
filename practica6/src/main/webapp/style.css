@@ -1,1 +1,21 @@
-@charset "UTF-8";
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+h1 {
+    color: blue;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+form {
+    margin: 0 auto;
+    width: 300px; 
+}
+
+
