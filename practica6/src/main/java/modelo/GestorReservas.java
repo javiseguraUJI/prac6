@@ -297,7 +297,6 @@ public class GestorReservas {
 	 * @param hora Hora de la sesión en formato 24 horas.
 	 * @return Un objeto `JSONObject` con el código de la reserva si se realizó con éxito, o vacío si no fue posible reservar.
 	 */
-	@SuppressWarnings("unchecked")
 	public JSONObject hazReserva(String codUsuario, String actividad, DiaSemana dia, long hora) {
         // IMPLEMENTADO
 		Sesion sesion = buscaSesion(actividad, dia, hora); // Buscamos la sesión
@@ -392,6 +391,7 @@ public class GestorReservas {
 	 * @return Un `JSONObject` con la representación de la reserva cancelada, o vacío si no se encontró.
 	 */
 
+	@SuppressWarnings("unchecked")
 	public JSONObject cancelaReserva(String codUsuario, long codReserva) {
 	    Vector<Reserva> reservasUsuario = reservas.get(codUsuario);
 	    if (reservasUsuario == null) return new JSONObject();

@@ -18,7 +18,7 @@
 	  JSONArray plazas = (JSONArray) request.getAttribute("plazas");
 	%>
 
-	<h1>Lista plazas disponibles de <%= actividad %></h1>
+	<h2>Lista plazas disponibles de <%= actividad %></h2>
 
 	<% if (plazas == null || plazas.isEmpty()) { %>
 	  <p>No hay plazas disponibles.</p>

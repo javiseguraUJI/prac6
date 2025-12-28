@@ -21,7 +21,7 @@
 	%>
 	
 	<% if (ok) { %>
-	  <h1>Enhorabuena, <%= codUsuario %>, has cancelado la reserva <%= codReserva %></h1>
+	  <h2>Enhorabuena, <%= codUsuario %>, has cancelado la reserva <%= codReserva %></h2>
 	
 	  <%
 	    Object notificarObj = resultado.get("notificar");
@@ -34,7 +34,7 @@
 	  %>
 	
 	<% } else { %>
-	  <h1>Lo lamento, <%= codUsuario %>, no hemos podido cancelar la reserva <%= codReserva %></h1>
+	  <h2>Lo lamento, <%= codUsuario %>, no hemos podido cancelar la reserva <%= codReserva %></h2>
 	  <p>Había indicado una reserva inexistente o de otro usuario.</p>
 	<% } %>
 	

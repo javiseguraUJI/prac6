@@ -20,9 +20,9 @@
 	%>
 
 	<% if (ok) { %>
-	  <h1>Enhorabuena, <%= codUsuario %>, has hecho la reserva con código: <%= resultado.get("codReserva") %></h1>
+	  <h2>Enhorabuena, <%= codUsuario %>, has hecho la reserva con código: <%= resultado.get("codReserva") %></h2>
 	<% } else { %>
-	  <h1>No se ha podido realizar la reserva</h1>
+	  <h2>No se ha podido realizar la reserva</h2>
 	  <p>Comprueba que la sesión existe, que hay plazas y que no tengas ya una reserva igual.</p>
 	<% } %>
 	

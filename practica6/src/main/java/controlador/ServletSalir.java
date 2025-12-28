@@ -18,7 +18,6 @@ public class ServletSalir extends HttpServlet {
        
 
 	private static final String ATTR_GESTOR = "gestorReservas";
-	private static final String ATTR_COD_USUARIO = "codUsuario";
     /**
      * @see HttpServlet#HttpServlet()
      */

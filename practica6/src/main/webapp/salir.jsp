@@ -19,9 +19,9 @@
 
 	%>
 	
-	<h1>Hasta luego <%= codUsuario %></h1>
+	<h2>Hasta luego <%= codUsuario %></h2>
 	
-	<h1>Te estaremos esperando</h1>
+	<h2>Te estaremos esperando</h2>
 	
 	
 	</body>

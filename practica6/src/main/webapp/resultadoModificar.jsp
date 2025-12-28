@@ -20,23 +20,15 @@
 	%>
 
 	<% if (ok) { %>
-	  <h1>Enhorabuena, <%= codUsuario %>, has modificado la reserva con código: <%= resultado.get("codReserva") %></h1>
+	  <h2>Enhorabuena, <%= codUsuario %>, has modificado la reserva con código: <%= resultado.get("codReserva") %></h2>
 	<% } else { %>
-	  <h1>No se ha podido modificar la reserva</h1>
+	  <h2>No se ha podido modificar la reserva</h2>
 	  <p>Comprueba que la reserva existe y que existe una sesión con plazas en el día y hora indicados.</p>
 	<% } %>
 	
 	<p style="margin-top:30px;">
 	  <a href="<%=request.getContextPath()%>/menu.html">Menú</a>
 	</p>
-
-</body>
-</html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 
 </body>
 </html>
