@@ -56,6 +56,7 @@ public class ServletListarReservas extends HttpServlet {
 	    
 	    // Si no hay gestor o no hay usuario autenticado, volver al índice
 	    if (gestor == null || cod == null) {
+	    	System.out.print(gestor +"->gestor  " + cod + "->cod");
 	      response.sendRedirect(request.getContextPath() + "/index.html");
 	      return;
 	    }

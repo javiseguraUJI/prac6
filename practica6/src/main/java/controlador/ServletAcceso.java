@@ -37,6 +37,8 @@ public class ServletAcceso extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+
+		
 		// 1) Crear el GestorReservas la primera vez y guardarlo en el contexto
         ServletContext ctx = getServletContext();
         synchronized (ctx) {
@@ -47,7 +49,7 @@ public class ServletAcceso extends HttpServlet {
         }
         
         // 2) Guardar el código del cliente en sesión 
-        String cod = request.getParameter("cod"); 
+        String cod = request.getParameter("cod");
         if (cod == null || cod.isBlank()) {
             // si no llega código, vuelve al índice con mensaje
             request.setAttribute("error", "Debes introducir un código de usuario.");
@@ -56,15 +58,16 @@ public class ServletAcceso extends HttpServlet {
             return;
         }
 
-       
-        HttpSession session = request.getSession(true);
-        session.setAttribute(ATTR_COD_USUARIO, cod.trim());
+		HttpSession session = request.getSession(false);
+        if (session != null) {
+        	session.invalidate();
+        }
         
-        
+    	session = request.getSession(true);
+    	session.setAttribute(ATTR_COD_USUARIO, cod.trim());
+
         // 3) Ir a menu.html
-        RequestDispatcher rd = request.getRequestDispatcher("/menu.html");
-        rd.forward(request, response);
-        
+        response.sendRedirect(request.getContextPath() + "/menu.html");
 	}
 
 }

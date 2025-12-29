@@ -15,8 +15,7 @@
 
 	
 	<%
-	  String codUsuario = (String) session.getAttribute("codUsuario");
-
+	  String codUsuario = request.getParameter("codUsuario");
 	%>
 	
 	<h2>Hasta luego <%= codUsuario %></h2>
